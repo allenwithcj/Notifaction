@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="64dp" >
+
+    <ImageView
+            android:id="@+id/iv_singer_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/ic_launcher" />
+
+    <LinearLayout
+            android:id="@+id/ll_song_operation"
+            android:layout_width="96dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+        <Button
+                android:id="@+id/btn_previous"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_launcher" />
+
+        <Button
+                android:id="@+id/btn_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_launcher" />
+
+        <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@mipmap/ic_launcher" />
+    </LinearLayout>
+
+    <LinearLayout
+            android:id="@+id/ll_song_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/ll_song_operation"
+            android:layout_toRightOf="@id/iv_singer_photo"
+            android:gravity="center_vertical"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/tv_song_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:text="when i'm gone"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tv_singer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#696969"
+                android:text="eminem"
+                android:textSize="13sp" />
+    </LinearLayout>
+
+</RelativeLayout>
