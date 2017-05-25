@@ -120,6 +120,12 @@ public class Main2Activity extends AppCompatActivity {
         if(item.getItemId() == android.R.id.home){
             // 打开抽屉侧滑菜单
             mDrawerLayout.openDrawer(GravityCompat.START);
+        }else if(item.getItemId() == R.id.more){
+            Intent intent = new Intent(this,MoreActivity.class);
+            startActivity(intent);
+
+        }else if(item.getItemId() == R.id.search){
+
         }
         return super.onOptionsItemSelected(item);
     }
