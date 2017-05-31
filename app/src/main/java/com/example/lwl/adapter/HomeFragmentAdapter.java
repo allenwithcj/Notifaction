@@ -1,8 +1,12 @@
-package com.example.lwl.ui;
+package com.example.lwl.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import com.example.lwl.ui.Fragment1;
+import com.example.lwl.ui.Fragment2;
+import com.example.lwl.ui.Fragment3;
+import com.example.lwl.ui.Fragment4;
 
 import java.util.List;
 

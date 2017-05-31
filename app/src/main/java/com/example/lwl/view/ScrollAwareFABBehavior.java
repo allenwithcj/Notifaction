@@ -1,4 +1,4 @@
-package com.example.lwl.ui;
+package com.example.lwl.view;
 
 import android.content.Context;
 import android.os.Build;

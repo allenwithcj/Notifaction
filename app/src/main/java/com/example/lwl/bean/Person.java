@@ -1,4 +1,4 @@
-package com.example.lwl.ui;
+package com.example.lwl.bean;
 
 /**
  * Created by lwl on 2017/5/24.

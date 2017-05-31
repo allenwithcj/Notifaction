@@ -52,7 +52,7 @@
                 android:layout_gravity="bottom|end"
                 android:layout_margin="10dp"
                 android:src="@android:drawable/ic_dialog_email"
-                app:layout_behavior="com.example.lwl.ui.ScrollAwareFABBehavior"/>
+                app:layout_behavior="com.example.lwl.view.ScrollAwareFABBehavior"/>
 
     </android.support.design.widget.CoordinatorLayout>
 

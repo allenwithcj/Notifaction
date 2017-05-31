@@ -9,6 +9,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.example.lwl.adapter.MyAdapter;
+import com.example.lwl.bean.Person;
 import com.example.lwl.notifaction.R;
 
 import java.util.ArrayList;

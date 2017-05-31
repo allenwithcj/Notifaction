@@ -26,6 +26,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.*;
 import android.widget.RemoteViews;
 import android.widget.Toast;
+import com.example.lwl.adapter.HomeFragmentAdapter;
 import com.example.lwl.notifaction.R;
 
 import java.util.Arrays;
