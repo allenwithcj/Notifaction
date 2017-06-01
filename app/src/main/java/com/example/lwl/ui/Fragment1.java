@@ -3,6 +3,7 @@ package com.example.lwl.ui;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -73,6 +74,19 @@ public class Fragment1 extends Fragment {
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
         myAdapter = new MyAdapter();
+        myAdapter.setmOnItemClickListener(new MyAdapter.onItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Snackbar.make(view,personList.get(position).getName(),Snackbar.LENGTH_SHORT).show();
+            }
+        });
+
+        myAdapter.setmOnItemLongClickListener(new MyAdapter.onItemLongClickListener() {
+            @Override
+            public void onItemLongClick(View view, int position) {
+                Snackbar.make(view,personList.get(position).getName(),Snackbar.LENGTH_SHORT).show();
+            }
+        });
         recyclerView.setAdapter(myAdapter);
     }
 

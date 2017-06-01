@@ -16,6 +16,26 @@ import java.util.List;
 public class MyAdapter extends RecyclerView.Adapter{
     private List<Person> personList;
 
+
+    public interface onItemClickListener{
+        void onItemClick(View view,int position);
+    }
+
+    public interface onItemLongClickListener{
+        void onItemLongClick(View view,int position);
+    }
+
+    private onItemClickListener mOnItemClickListener;
+    private onItemLongClickListener mOnItemLongClickListener;
+
+    public void setmOnItemClickListener(onItemClickListener mOnItemClickListener) {
+        this.mOnItemClickListener = mOnItemClickListener;
+    }
+
+    public void setmOnItemLongClickListener(onItemLongClickListener mOnItemLongClickListener) {
+        this.mOnItemLongClickListener = mOnItemLongClickListener;
+    }
+
     public void setData(List<Person> personList) {
         this.personList = personList;
         notifyDataSetChanged();
@@ -46,6 +66,23 @@ public class MyAdapter extends RecyclerView.Adapter{
         public MyViewHolder(View itemView) {
             super(itemView);
             name = (TextView)itemView.findViewById(R.id.name);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int position = getLayoutPosition();
+                    mOnItemClickListener.onItemClick(view,position);
+                }
+            });
+
+            itemView.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    int position = getLayoutPosition();
+                    mOnItemLongClickListener.onItemLongClick(view,position);
+                    return true;
+                }
+            });
         }
     }
 
